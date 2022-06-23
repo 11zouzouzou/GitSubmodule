@@ -81,3 +81,35 @@ git submodule deinit project-sub-1
 git rm project-sub-1
 ```
 3. 方法一中的第四步可能还需要走动删一下
+
+### 克隆包含子模块的项目
+
+#### 克隆父项目，再更新子模块
+
+1. 克隆项目
+```bash
+git clone XXX
+```
+
+2. 查看子模块
+```bash
+git submodule
+```
+> 子模块前面有一个-，说明子模块文件还未检入（空文件夹）。
+
+3. 初始化子模块
+```bash
+git submodule init
+```
+
+4. 更新子模块
+```bash
+git submodule update
+```
+
+#### 递归克隆整个项目
+
+1. 
+```bash
+ git clone xxx --recursive 
+```
