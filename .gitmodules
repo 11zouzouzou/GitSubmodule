@@ -1,3 +1,6 @@
 [submodule "Webgl-basic"]
 	path = Webgl-basic
 	url = git@github.com:11zouzouzou/Webgl-basic.git
+[submodule "TsDesignPatterns"]
+	path = TsDesignPatterns
+	url = git@github.com:11zouzouzou/TsDesignPatterns.git
