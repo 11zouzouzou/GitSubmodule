@@ -33,3 +33,9 @@ git submodule
 ```bash
  git submodule update --remote
 ```
+
+### 修改子模块
+
+- 在子模块中修改文件后，直接提交到远程项目分支。
+
+
