@@ -44,3 +44,40 @@ git submodule
 - 在子模块中(命令行文件根目录需要更换到对应子模块)
 1. git checkout 自定版本
 2. 在主项目目录中 git add . ; git commit -m 'xx'; git push
+
+### 删除子模块
+
+#### 方法一
+1. 删除子模块文件夹
+```bash
+ git rm --cached 子模块文件夹名
+ rm -rf 子模块文件夹名
+```
+2. 删除.gitmodules文件中相关子模块信息
+```text
+[submodule "Webgl-basic"]
+	path = Webgl-basic
+	url = git@github.com:11zouzouzou/Webgl-basic.git
+```
+3. 删除.git/config中的相关子模块信息
+```text
+[submodule "Webgl-basic"]
+	url = git@github.com:11zouzouzou/Webgl-basic.git
+	active = true
+```
+4. 删除.git文件夹中的相关子模块文件
+```bash
+rm -rf .git/modules/assets
+```
+
+#### 方法二
+
+1. 自动在 .git/config 中删除
+```bash
+git submodule deinit project-sub-1
+```
+2. 移除了project-sub-1 文件夹，并自动在 .gitmodules 中删除
+```bash
+git rm project-sub-1
+```
+3. 方法一中的第四步可能还需要走动删一下
